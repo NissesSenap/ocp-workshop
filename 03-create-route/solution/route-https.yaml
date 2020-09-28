@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app.kubernetes.io/name: load-balancer-example
+  name: my-service
+spec:
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: my-service
+    weight: 100
+  wildcardPolicy: None
+  tls:
+    termination: edge
