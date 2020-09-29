@@ -9,10 +9,10 @@ It will also contain a solutions folder if everything isn't explained in the REA
 In the README you will also find tasks to be done from time to time.
 Where you will need to use external resources to solve it.
 
-## Asumption
+## Assumption
 
 - Assuming that you are using a decently new OCP like 4.5.
-- That you are allways working in your project/namespace
+- That you are always working in your project/namespace
 
 ## External resources
 
@@ -26,9 +26,13 @@ https://kubernetes.io/docs/home/
 
 https://learn.openshift.com/
 
-### My cheat sheet
+### Cheat sheet
 
-Here you can find my cheat sheet, it contains lots of lots of things that you don't need in this stage of your learning but it's nice to get some insperation some times.
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+#### My cheat sheet
+
+Here you can find my cheat sheet, it contains lots of lots of things that you don't need in this stage of your learning but it's nice to get some inspiration some times.
 
 I update it from time to time.
 
@@ -40,11 +44,10 @@ If you are going to reuse this repo you probably want to set a few custom specif
 
 ### Correct uri
 
-find . -type f -name '*.md' -exec sed -i 's/my-domain/my-domain/g' {} \;
+```find . -type f -name '*.md' -exec sed -i 's/my-domain/my-domain/g' {} \;```
 
 ### Proxy artifactory
 
-If you are like me and rather ofen is storing your containers in a external artifactory here is a simple sed command to replace to default gcr.io
+If you are like me and rather often is storing your containers in a external artifactory here is a simple sed command to replace to default gcr.io
 
-find . -type f -name '*.yaml' -exec sed -i 's/gcr.io/artifactory.my-domain\/docker-gcr.io/g' {} \;
-
+```find . -type f -name '*.yaml' -exec sed -i 's/gcr.io/artifactory.my-domain\/docker-gcr.io/g' {} \;```
