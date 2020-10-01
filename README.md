@@ -44,7 +44,7 @@ If you are going to reuse this repo you probably want to set a few custom specif
 
 ### Correct uri
 
-```find . -type f -name '*.md' -exec sed -i 's/my-domain/my-domain/g' {} \;```
+```find . -type f -name '*.md' -exec sed -i 's/cluster-uri/my-domain/g' {} \;```
 
 ### Proxy artifactory
 
