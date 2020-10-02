@@ -38,4 +38,4 @@ oc get route my-service -o go-template --template='{{.spec.host}}'
 
 And add a curl on that.
 
-curl $(oc get route my-service -o go-template --template='{{.spec.host}}')'
+curl $(oc get route my-service -o go-template --template='{{.spec.host}}')
