@@ -24,7 +24,7 @@ https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-read
 
 ### Verify
 
-oc get <pod-name> -o jsonpath="{.spec.containers[0].livenessProbe}"
+oc get pod <pod-name> -o jsonpath="{.spec.containers[0].livenessProbe}"
 
 ## requests
 

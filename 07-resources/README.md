@@ -16,7 +16,7 @@ oc explain pod.spec.containers.resources
 
 ### Verify
 
-oc get <pod-name> -o jsonpath="{.spec.containers[0].resources}"
+oc get pod <pod-name> -o jsonpath="{.spec.containers[0].resources}"
 
 ## requests
 
