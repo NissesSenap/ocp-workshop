@@ -1,6 +1,6 @@
 # helm intro
 
-Steeling with pride: https://helm.sh/docs/chart_template_guide/getting_started/
+Steeling with pride, **follow**: https://helm.sh/docs/chart_template_guide/getting_started/
 
 Helm is the main templateing solution together with kustomize in the kubernetes space and it's something that I normally use.
 So lets do some basic templateing tasks.
@@ -15,7 +15,7 @@ So lets do some basic templateing tasks.
 The first task you will find under: https://helm.sh/docs/chart_template_guide/getting_started/
 The second step https://helm.sh/docs/chart_template_guide/subcharts_and_globals/
 
-## requests
+## Base
 
 Checkout the standard configmap.yaml
 
