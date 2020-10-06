@@ -34,6 +34,8 @@ You should be able to see a hpa `oc get hpa`
 
 #### Load test your app
 
+While having HPA enabled let's put some load on it.
+
 Assuming that you created a http route, else change MYROUTE to https
 
 ```bash
@@ -41,6 +43,19 @@ Assuming that you created a http route, else change MYROUTE to https
 export MYROUTE=http://$(oc get route my-service -o go-template --template='{{.spec.host}}')
 # Lets create some load
 for ((i=1;i<=10000;i++)); do curl -v $MYROUTE; done
+
+# Or start another terminal a do some while instead :)
+# Remember you have to do the export in both terminals
+while true; do curl -q $MYROUTE; done
+
+```
+
+It can take a few *minutes* to get any good output from the hpa. It might look something like in this in the beginning:
+
+```bash
+oc get hpa
+NAME        REFERENCE              TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+session2   Deployment/something   <unknown>/5%   1         3         0          3s
 ```
 
 In another terminal `oc get pods -w`
