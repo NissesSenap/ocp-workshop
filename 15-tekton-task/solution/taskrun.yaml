@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  name: oc-taskrun
+spec:
+  params:
+    - name: ARGS
+      value:
+        - get
+        - pods
+  taskRef:
+    name: openshift-client
