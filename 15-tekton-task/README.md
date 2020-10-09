@@ -25,6 +25,18 @@ But you can remove a bunch of things in it.
 
 You can also create a taskrun from the console.
 
+If you get an issue with running your `oc get pods` command from within the pod you probably need a service account.
+Use **deployer** for simplicity, this should not be used in prod.
+
+This is a small example on how a service account can look like in a taskrun.
+
+```yaml
+spec:
+  serviceAccountName: deployer
+```
+
+**NOTE** if you install openshift-pipelines you automatically get a pipeline account with a decent level of access.
+
 ### Verify
 
 Assuming that you used the name `oc-taskrun` for your taskrun.
