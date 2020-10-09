@@ -13,6 +13,8 @@ Sealed secrets is one of the ways of doing this.
 
 You can find the kubeseal cli [here](https://github.com/bitnami-labs/sealed-secrets/releases)
 
+I assume that your cluster admin have installed sealed-secret on your cluster.
+
 ### Tip
 
 Don't forget to look at sealed-secret.yaml file after generating it.

@@ -51,3 +51,7 @@ If you are going to reuse this repo you probably want to set a few custom specif
 If you are like me and rather often is storing your containers in a external artifactory here is a simple sed command to replace to default gcr.io
 
 ```find . -type f -name '*.yaml' -exec sed -i 's/gcr.io/artifactory.my-domain\/docker-gcr.io/g' {} \;```
+
+And for quay.
+
+```find . -type f -name '*.yaml' -exec sed -i 's/quay.io/artifactory.my-domain\/docker-quay.io/g' {} \;```
